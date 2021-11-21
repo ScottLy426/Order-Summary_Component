@@ -1,50 +1,107 @@
+:root{
+
+ --Pale-blue: hsl(225, 100%, 94%);
+ --Bright-blue: hsl(245, 75%, 52%);
+
+ --Very-pale-blue: hsl(225, 100%, 98%);
+ --Desaturated-blue: hsl(224, 23%, 55%);
+ --Dark-blue: hsl(223, 47%, 23%);
+
+ --Font-size: 16px;
+   font-family: 'Red Hat Display', sans-serif;
+   text-align: center;
+
+ --Font-weight-s: 500;
+ --Font-weight-m: 700;
+ --Font-weight-l: 900;
+}
+
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
 }
 
-
-body{
- background-image: url("./images/pattern-background-desktop.svg");
- background-repeat: no-repeat;
- background-size: contain;
+body{   
+    background: url("./images/pattern-background-desktop.svg"), hsl(225, 100%, 94%);;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
 .card-container{
-
- display:flex;
- align-items: center;
- justify-content: center;
- 
-
- height: 100vh;
- width: 100vw;
-
- 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
 }
-
-
 
 .card{
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    height: 500px;
-    width: 400px;
-    border-radius: 15px;
+    background-color:var(--Very-pale-blue);
+    border-radius: 20px; 
 }
 
 .hero-image{
-    object-fit:contain;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.order-summary{
+    margin-top: 30px;
+    font-weight: var(--Font-weight-l);
+}
+
+.desc{
+    line-height: .75rem;
+    margin-top: 10px;
 }
 
 .payment-plan-container{
-    margin: auto;
-    display:flex;
     
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.music-icon{
+    object-fit: contain;
+}
+
+.annual{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   
+    margin-left: 10px;
+    margin-right: 75px;
+}
+
+.annual-desc{
+    font-weight: var(--Font-weight-l);
+}
+.change:link{
+    color:var(--Desaturated-blue);
+    font-weight: var(--Font-weight-l);
+}
+.change:hover{
+    color:var(--Dark-blue);
+    text-decoration: none; 
+}
+.payment-process{
+    margin-top: 30px;
+    color:var(--Very-pale-blue);
+    background-color: var(--Bright-blue);
+    text-decoration: none;
+    height:40px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 10px 30px -10px var(--Desaturated-blue);
+}
+.cancel{
+    margin-top: 30px;
+    display: block;
+    padding-bottom: 40px;
 }
 
